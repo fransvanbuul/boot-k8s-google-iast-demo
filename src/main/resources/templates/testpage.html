@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Boot-K8s-Google-IAST-demo</title>
+</head>
+<body>
+<h1>Test page</h1>
+<form>
+    <p>
+        <label for="inputtext">Input: </label>
+        <input type="text" id="inputtext" name="inputtext"/>
+    </p>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+    <div th:if="${inputtext != null}">
+        <hr/>
+        <h2>Previous input</h2>
+        <p th:utext="${inputtext}">
+    </div>
+</form>
+</body>
+</html>

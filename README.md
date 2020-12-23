@@ -2,4 +2,6 @@
 
 Small demo of running IAST technology in combination with Spring Boot, Kubernetes and Google Identity / ReCaptcha
 
-Author: Frans van Buul
+The application has an intentional reflected XSS vulnerability in /testpage, which is easily found using WebInspect.
+
+
