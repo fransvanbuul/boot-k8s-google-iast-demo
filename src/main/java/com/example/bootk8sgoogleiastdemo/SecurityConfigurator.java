@@ -10,11 +10,15 @@ public class SecurityConfigurator extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .antMatcher("/*")
-                .anonymous()
-
-                .and()
                 .csrf()
-                .disable();
+                .disable()
+                .antMatcher("/**")
+                .authorizeRequests()
+                .antMatchers("/")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+                .and()
+                .oauth2Login();
     }
 }
