@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Boot-K8s-Google-IAST-demo</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 <h1>Test page</h1>
@@ -11,6 +12,9 @@
         <label for="inputtext">Input: </label>
         <input type="text" id="inputtext" name="inputtext"/>
     </p>
+    <div class="g-recaptcha col-sm-5"
+         th:attr="data-sitekey=${@captchaSettings.getSite()}"></div>
+    <p th:text="${captchaerror}" th:if="${captchaerror != null}" style="color: red; font-weight: bold"/>
     <p>
         <button type="submit">Submit</button>
     </p>

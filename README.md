@@ -6,3 +6,4 @@ The application has an intentional reflected XSS vulnerability in /testpage, whi
 
 Because /testpage is behind Google Login, WebInspect will only find this if you provide it with a login macro to allow it to login.
 
+For ReCaptcha, largely following https://www.baeldung.com/spring-security-registration-captcha
